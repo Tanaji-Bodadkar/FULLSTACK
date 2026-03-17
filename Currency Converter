@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Currency Converter</title>
+    </head>
+    <body>
+        <script>
+           let country = prompt("Enter country name:");
+            let amount = Number(prompt("Enter amount:"));
+
+            let rate;
+            let currencyName;
+            let symbol;
+
+            switch(country.toLowerCase()) {
+
+                case "india":
+                    rate = 1;
+                    currencyName = "Indian Rupee";
+                    symbol = "₹";
+                    break;
+
+                case "usa":
+                    rate = 83;
+                    currencyName = "US Dollar";
+                    symbol = "$";
+                    break;
+
+                case "japan":
+                    rate = 0.55;
+                    currencyName = "Japanese Yen";
+                    symbol = "¥";
+                    break;
+
+                case "uk":
+                    rate = 105;
+                    currencyName = "British Pound";
+                    symbol = "£";
+                    break;
+
+                case "europe":
+                    rate = 90;
+                    currencyName = "Euro";
+                    symbol = "€";
+                    break;
+
+                default:
+                    console.log("Invalid country!");
+                    rate = null;
+            }
+
+            if(rate !== null){
+                let result = amount * rate;
+
+                console.log("Country:", country);
+                console.log("Currency:", currencyName, symbol);
+                console.log("Converted Amount:", result.toFixed(2), "INR");
+            }
+
+            
+        </script>
+    </body>
