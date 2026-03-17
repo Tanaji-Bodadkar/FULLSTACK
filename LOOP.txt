@@ -1,0 +1,44 @@
+Loop is a block of code can be executed number of times.
+types:
+    for 
+    while
+    do while
+    for...in
+    for...of
+
+1 for Loop
+    SYNTAX:
+    let i = 0
+    for (let i=1;i<=5;i++){
+        console.log(i)
+    }
+
+2 while Loop
+    SYNTAX:
+    let i=1
+    while(i<5){
+        console.log(i)
+        i++
+    }
+
+3 do while Loop: EXECUTES THE CODE AT LEAST ONCE , EVEN IF THE CONDITON IS FALSE    
+    SYNTAX:
+    let i=1
+    do{
+        conole.log(i)
+        i++
+    }while(i<5)
+// above 3 loops take all data and gives data
+ 
+4 for...in Loop: used for accessing the data from object
+let person = {
+    name="Tanaji"
+    age=25
+}
+for(let key in person){
+    console.log(key)
+}
+
+5 for...of Loop: used to iterate over iteratable objects like arrays
+let person = [10,20,30]
+console.log(person[key])

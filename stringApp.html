@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>String Manipulation</title>
+    </head>
+    <body>
+        <script>
+        //lets build a String Utility Application (FULL CODE)This app lets user:Enter a string,Change length view,Access characters,Convert to upper/lowercase,Find index,Check existence,Replace text,Repeat string
+           let str = prompt("Enter your string:");
+
+let choice;
+
+do {
+    choice = prompt(
+        "\nChoose an option:\n" +
+        "1. Length\n" +
+        "2. Uppercase\n" +
+        "3. Lowercase\n" +
+        "4. Get Character\n" +
+        "5. Find Index\n" +
+        "6. Check Exists\n" +
+        "7. Replace\n" +
+        "8. Repeat\n" +
+        "9. Exit"
+    );
+
+    switch(choice) {
+
+        case "1":
+            console.log("Length:", str.length);
+            break;
+
+        case "2":
+            console.log("Uppercase:", str.toUpperCase());
+            break;
+
+        case "3":
+            console.log("Lowercase:", str.toLowerCase());
+            break;
+
+        case "4":
+            let index = prompt("Enter index:");
+            console.log("Character:", str.charAt(index));
+            break;
+
+        case "5":
+            let word = prompt("Enter word to find:");
+            console.log("Index:", str.indexOf(word));
+            break;
+
+        case "6":
+            let check = prompt("Enter word:");
+            if (str.includes(check)) {
+                console.log("Exists ");
+            } else {
+                console.log("Not Found ");
+            }
+            break;
+
+        case "7":
+            let oldWord = prompt("Word to replace:");
+            let newWord = prompt("New word:");
+            str = str.replace(oldWord, newWord);
+            console.log("Updated String:", str);
+            break;
+
+        case "8":
+            let times = Number(prompt("Enter number of times:"));
+            console.log("Repeated:", str.repeat(times));
+            break;
+
+        case "9":
+            console.log("Exiting...");
+            break;
+
+        default:
+            console.log("Invalid choice ");
+    }
+
+    } 
+    while(choice !== "9"); 
+        </script>
+    </body>
