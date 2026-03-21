@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fan On Click</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .fan-container {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #fan {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fan-container">
+        <img id="fan" src="fan.png">
+    </div>
+
+    <button onclick="runFan()">Turn ON Fan</button>
+    <button onclick="stopFan()">Turn OFF Fan</button>
+
+    <script>
+        function runFan() {
+            document.getElementById("fan").src = "fan.gif";
+        }
+
+        function stopFan() {
+            document.getElementById("fan").src = "fan.png";
+        }
+    </script>
+
+</body>
+</html>
